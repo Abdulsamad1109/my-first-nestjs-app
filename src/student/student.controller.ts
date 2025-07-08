@@ -23,7 +23,7 @@ export class StudentController {
     return this.studentService.findAll();
   }
 
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   @Get('profile')
   getProfile( @Request() req){
     return req.user

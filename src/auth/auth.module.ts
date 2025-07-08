@@ -17,7 +17,7 @@ import { StudentModule } from 'src/student/student.module';
       inject: [ConfigService],
       useFactory: (config: ConfigService) => {
         return{
-          secret: config.get<string>('JWT_SECRET'),
+          secret: config.get<string>('JWT_SECRET'), 
           signOptions: {expiresIn: '1h'}
         }
       }
